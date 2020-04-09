@@ -6,6 +6,5 @@
     <script src="login/login_s.lua" type="server"/>
     <file src="login/index.html"/>
     <file src="login/styles.css"/>
-    <file src="login/OpenSans-Bold.ttf"/>
     <file src="login/login.js"/>
 </meta>
