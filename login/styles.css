@@ -1,0 +1,29 @@
+html, body {
+    margin: 0;
+    color: white;
+    height: 100%;
+}
+
+div {
+    height: 100%;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.login-form {
+    position: relative;
+    background-color: #22242b;
+    width:26.041%;
+    height: 50%;
+    left: 37.5%;
+    top: 23.959%;
+}
+
+input {
+    display: block;
+    margin: 0;
+}
