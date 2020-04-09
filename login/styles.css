@@ -26,4 +26,17 @@ h2 {
 input {
     display: block;
     margin: 0;
+    border-style: none;
+    width: 80%;
+    height: 8%;
+    outline: none;
+    margin-left: 9%;
+}
+
+input[type="button"] {
+    width: 82%;
+}
+
+.login-input {
+    padding-left: 2%;
 }
