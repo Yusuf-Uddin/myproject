@@ -1,0 +1,11 @@
+<meta>
+    <info author="Dice" type="gamemode" name="Roleplay 1.0"/>
+
+    <!-- LOGIN -->
+    <script src="login/login_c.lua" type="client"/>
+    <script src="login/login_s.lua" type="server"/>
+    <file src="login/index.html"/>
+    <file src="login/styles.css"/>
+    <file src="login/OpenSans-Bold.ttf"/>
+    <file src="login/login.js"/>
+</meta>
