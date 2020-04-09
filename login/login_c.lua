@@ -15,11 +15,3 @@ function adasd()
     destroyElement(browser)
 end
 addCommandHandler("hallo", adasd)
-
-function getUserData(username, password)
-    local user = username
-    local password = password
-    outputChatBox(user.." "..password)
-end
-addEvent("onRequestLogin", true)
-addEventHandler("onRequestLogin", root, getUserData)
