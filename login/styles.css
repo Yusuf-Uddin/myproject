@@ -31,12 +31,9 @@ input {
     height: 8%;
     outline: none;
     margin-left: 9%;
+    padding-left: 2%;
 }
 
 input[type="button"] {
     width: 82%;
-}
-
-.login-input {
-    padding-left: 2%;
 }
