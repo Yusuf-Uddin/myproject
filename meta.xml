@@ -7,4 +7,5 @@
     <file src="login/index.html"/>
     <file src="login/styles.css"/>
     <file src="login/login.js"/>
+    <file src="login/css/bootstrap.min.css"/>
 </meta>

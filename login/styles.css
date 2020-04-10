@@ -10,9 +10,10 @@ div {
 
 h2 {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
     position: relative;
+    top: 10%;
 }
 
 .login-form {
@@ -29,12 +30,51 @@ input {
     margin: 0;
     border-style: none;
     width: 80%;
-    height: 8%;
+    height: 10%;
     outline: none;
     margin-left: 9%;
     padding-left: 2%;
+    position: relative;
+    top: 13%;
+    color: white;
+
+}
+
+.login-input {
+    margin-top: 4%;
+    background-color: #17191f;
 }
 
 input[type="button"] {
-    width: 82%;
+    width: 80%;
+    margin-top: 4%;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+input[value="Register"] {
+    background-color: #22242b;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+}
+
+input[value="Login"] {
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+}
+
+input[value="Login"]:hover {
+    animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 400%;
+    }
 }
