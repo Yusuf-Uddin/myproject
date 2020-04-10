@@ -1,4 +1,4 @@
-connection = dbConnect('sqlite', 'database.db')
+connection = dbConnect('sqlite', 'database/database.db')
 
 if (connection) then
     outputDebugString('Successfully connected to database', 3, 0, 255, 0)
