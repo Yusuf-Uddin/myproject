@@ -13,7 +13,8 @@ addEventHandler("onClientBrowserCreated", theBrowser,
 
 -- Send login data to server
 function handleLogin(type, username, password)
-    triggerServerEvent("handleLogin", root, type, username, password)
+    local player = getLocalPlayer()
+    triggerServerEvent("handleLogin", root, type, username, password, player)
 end
 addEvent("onLogin", true)
 addEventHandler("onLogin", root, handleLogin)
