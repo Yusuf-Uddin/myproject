@@ -11,15 +11,9 @@ addEventHandler("onClientBrowserCreated", theBrowser,
     end
 )
 
-function adasd()
-    destroyElement(browser)
-end
-addCommandHandler("hallo", adasd)
-
-function handleLogin(username, password)
-    outputChatBox(username.." "..password)
-    destroyElement(browser)
-    showCursor(false)
+-- Send login data to server
+function handleLogin(type, username, password)
+    triggerServerEvent("handleLogin", root, type, username, password)
 end
 addEvent("onLogin", true)
 addEventHandler("onLogin", root, handleLogin)
