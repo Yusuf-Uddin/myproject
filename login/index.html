@@ -4,15 +4,16 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <script src="login.js"></script>
   </head>
 
   <body>
     <div class="login-form">
       <div class="login-content">
         <h2>Please Login</h2>
-        <input type="text" name="username" class="login-input" placeholder="Username">
-        <input type="password" name="password" class="login-input" placeholder="Password">
-        <input type="button" value="Login">
+        <input type="text" name="username" class="login-input" id="username" placeholder="Username">
+        <input type="password" name="password" class="login-input" id="password" placeholder="Password">
+        <input type="button" value="Login" onclick="handleLogin('Login')">
         <input type="button" value="Register">
       </div>
     </div>

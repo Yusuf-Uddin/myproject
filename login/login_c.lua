@@ -15,3 +15,11 @@ function adasd()
     destroyElement(browser)
 end
 addCommandHandler("hallo", adasd)
+
+function handleLogin(username, password)
+    outputChatBox(username.." "..password)
+    destroyElement(browser)
+    showCursor(false)
+end
+addEvent("onLogin", true)
+addEventHandler("onLogin", root, handleLogin)
