@@ -28,18 +28,20 @@ function login(type, username, password, player)
             
             -- Create the Account
             local account = addAccount(username, hashedPassword)
-            setElementData(player, 'username', username)
-            setElementData(player, 'password', password)
-            setElementData(player, 'money', 0)
-            setElementData(player, 'faction_id', 1)
-            setElementData(player, 'x', 0)
-            setElementData(player, 'y', 0)
-            setElementData(player, 'z', 5)
-            setElementData(player, 'new', true)
+            ravensetElementData(player, 'username', username)
+            ravensetElementData(player, 'password', password)
+            ravensetElementData(player, 'money', 0)
+            ravensetElementData(player, 'faction_id', 1)
+            ravensetElementData(player, 'x', 0)
+            ravensetElementData(player, 'y', 0)
+            ravensetElementData(player, 'z', 5)
+            ravensetElementData(player, 'new', 1)
             dbExec(connection, 'INSERT INTO userdata (username, password, money, faction_id, x, y, z, new) VALUES(?,?,?,?,?,?,?,?,?,?,?)', username, hashedPassword, 0, 1, 0, 0, 5, 1, 'Citizen', 0, 'User')
             outputChatBox('Account successfully created.', player)
-            logIn()
         end)
+
+        -- Login after registering
+        logIn(player, account, password)
     end
 end
 addEvent("handleLogin", true)
