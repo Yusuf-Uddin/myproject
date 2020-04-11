@@ -108,6 +108,7 @@ function ravenGetElementData(source, key)
             elseif (key == 'admin_rank') then
                 return admin_rank[source]
             end
+            return outputDebugString('Could not return userdata.', 3, 255, 0, 0)
         end
     end
 end
