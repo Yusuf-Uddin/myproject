@@ -1,6 +1,6 @@
 local sW, sH = guiGetScreenSize()
 
-local browser = guiCreateBrowser(0, 0, sW, sH, true, false, false)
+local browser = guiCreateBrowser(0, 0, sW, sH, true, true, false)
 local theBrowser = guiGetBrowser(browser)
 local url = "http://mta/local/login/index.html"
 
