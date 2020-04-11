@@ -3,6 +3,7 @@
 
     <!-- USERDATA -->
     <script src="database/db_connection.lua" type="server"/>
+    <script src="database/userdata_s.lua" type="server"/>
 
     <!-- LOGIN -->
     <script src="login/login_c.lua" type="client"/>
