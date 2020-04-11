@@ -1,12 +1,15 @@
 local keys = {
-    [1] = "username",
-    [2] = "password",
-    [3] = "money",
-    [4] = "faction_id",
-    [5] = "x",
-    [6] = "y",
-    [7] = "z",
-    [8] = "new"
+    [1] = 'username',
+    [2] = 'password',
+    [3] = 'money',
+    [4] = 'faction_id',
+    [5] = 'x',
+    [6] = 'y',
+    [7] = 'z',
+    [8] = 'new',
+    [9] = 'faction_rank',
+    [10] = 'ped_id',
+    [11] = 'admin_rank'
 }
 
 local username = {}
@@ -17,6 +20,9 @@ local x = {}
 local y = {}
 local z = {}
 local new = {}
+local faction_rank = {}
+local ped_id = {}
+local admin_rank = {}
 
 function ravenSetElementData(source, key, data)
     for i, k in ipairs(keys) do
@@ -56,6 +62,18 @@ function ravenSetElementData(source, key, data)
                 new[source] = data
                 outputDebugString('Successfully inserted userdata into table.', 3, 0, 255, 0)
                 break
+            elseif (key == 'faction_rank') then
+                faction_rank[source] = data
+                outputDebugString('Successfully inserted userdata into table.', 3, 0, 255, 0)
+                break
+            elseif (key == 'ped_id') then
+                ped_id[source] = data
+                outputDebugString('Successfully inserted userdata into table.', 3, 0, 255, 0)
+                break
+            elseif (key == 'admin_rank') then
+                admin_rank[source] = data
+                outputDebugString('Successfully inserted userdata into table.', 3, 0, 255, 0)
+                break
             end
         end
     end
@@ -83,6 +101,12 @@ function ravenGetElementData(source, key)
               return z[source]
             elseif (key == 'new') then
                 return new[source]
+            elseif (key == 'faction_rank') then
+                return faction_rank[source]
+            elseif (key == 'ped_id') then
+                return ped_id[source]
+            elseif (key == 'admin_rank') then
+                return admin_rank[source]
             end
         end
     end
