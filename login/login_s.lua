@@ -4,21 +4,23 @@
 ]]--
 
 function login(type, username, password, player)
+    local user = executeSQLQuery("SELECT * FROM userdata")
 
     -- Log into Account
     if (type == 'Login') then
-        local user = executeSQLQuery("SELECT * FROM userdata")
 
         -- Check if user exists
         for i, val in pairs(user) do
-            if (val.username ~= username) then
-                return outputChatBox('user doesnt exist')
+            if (val.username == username) then
+                outputChatBox('user exists')
+                break
+            else
+                return outputChatBox('User doesnt exist')
             end
         end
 
     -- Register new Account
     elseif (type == 'Register') then
-        local user = executeSQLQuery("SELECT * FROM userdata")
 
         -- Check if username already exists
         for i, val in pairs(user) do
