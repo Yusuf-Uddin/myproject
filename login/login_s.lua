@@ -1,47 +1,40 @@
+--[[ TODO
+    CHECK IF PASSWORD MATCHES
+    ADD DATA TO PLAYER ON LOGIN AND REGISTER
+]]--
+
 function login(type, username, password, player)
-    local account = getAccount(username, password)
 
     -- Log into Account
     if (type == 'Login') then
-        
-        -- Check if Account exists
-        if (account ~= false) then
+        local user = executeSQLQuery("SELECT * FROM userdata")
 
-            -- Login
-            logIn(player, account, password)
-        else
-
-            -- Tell user to register
-            outputChatBox('User doesnt exist please register.', player)
+        -- Check if user exists
+        for i, val in pairs(user) do
+            if (val.username ~= username) then
+                return outputChatBox('user doesnt exist')
+            end
         end
 
     -- Register new Account
     elseif (type == 'Register') then
+        local user = executeSQLQuery("SELECT * FROM userdata")
 
         -- Check if username already exists
-        if (account ~= false) then
-            return outputChatBox('Username already in use.', player)
+        for i, val in pairs(user) do
+            if (val.username == username) then
+                return outputChatBox('User already exists')
+            end
         end
         
         -- Hash the password
         passwordHash(password, 'bcrypt', {}, function(hashedPassword)
             
             -- Create the Account
-            local account = addAccount(username, hashedPassword)
-            ravenSetElementData(player, 'username', username)
-            ravenSetElementData(player, 'password', password)
-            ravenSetElementData(player, 'money', 0)
-            ravenSetElementData(player, 'faction_id', 1)
-            ravenSetElementData(player, 'x', 0)
-            ravenSetElementData(player, 'y', 0)
-            ravenSetElementData(player, 'z', 5)
-            ravenSetElementData(player, 'new', 1)
-            dbExec(connection, 'INSERT INTO userdata (username, password, money, faction_id, x, y, z, new) VALUES(?,?,?,?,?,?,?,?,?,?,?)', username, hashedPassword, 0, 1, 0, 0, 5, 1, 'Citizen', 0, 'User')
+            executeSQLQuery('INSERT INTO userdata(username, password, money, faction_id, x, y, z, new, faction_rank, ped_id, admin_rank) VALUES(?,?,?,?,?,?,?,?,?,?,?)', username, hashedPassword, 0, 1, 0, 0, 5, 1, 'Citizen', 0, 'User')
             outputChatBox('Account successfully created.', player)
-        end)
 
-        -- Login after registering
-        logIn(player, account, password)
+        end)
     end
 end
 addEvent("handleLogin", true)
