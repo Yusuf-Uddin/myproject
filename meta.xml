@@ -1,6 +1,9 @@
 <meta>
     <info author="Dice" type="gamemode" name="Roleplay 1.0"/>
 
+    <!-- GENERAL -->
+    <script src="utils_c.lua" type="client"/>
+
     <!-- USERDATA -->
     <script src="database/userdata_s.lua" type="server"/>
 
