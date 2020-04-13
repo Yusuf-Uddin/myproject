@@ -27,6 +27,7 @@ function login(type, username, password, player)
                 setElementData(player, 'ped_id', val.ped_id)
                 setElementData(player, 'admin_rank', val.admin_rank)
                 setPedSkin(player, val.ped_id)
+                triggerClientEvent(player, 'successfullLogin', player)
                 break
             else
                 return outputChatBox('Wrong username', player)
@@ -60,6 +61,7 @@ function login(type, username, password, player)
             setElementData(player, 'faction_rank', 'Citizen')
             setElementData(player, 'ped_id', 0)
             setElementData(player, 'admin_rank', 'User')
+            triggerClientEvent(player, 'successfullLogin', player)
         end)
     end
 end

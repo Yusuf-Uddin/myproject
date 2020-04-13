@@ -12,4 +12,7 @@
     <file src="login/styles.css"/>
     <file src="login/login.js"/>
     <file src="login/css/bootstrap.min.css"/>
+
+    <!-- CHAT SYSTEM -->
+    <script src="chatSys/admin_s.lua" type="server"/>
 </meta>
