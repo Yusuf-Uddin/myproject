@@ -2,13 +2,12 @@
     <info author="Dice" type="gamemode" name="Roleplay 1.0"/>
 
     <!-- USERDATA -->
-    <script src="database/db_connection.lua" type="server"/>
     <script src="database/userdata_s.lua" type="server"/>
-    <script src="database/handledata_s.lua" type="server"/>
 
     <!-- LOGIN -->
     <script src="login/login_c.lua" type="client"/>
     <script src="login/login_s.lua" type="server"/>
+    <script src="login/pedCreation_s.lua" type="server"/>
     <file src="login/index.html"/>
     <file src="login/styles.css"/>
     <file src="login/login.js"/>
