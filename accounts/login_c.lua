@@ -8,6 +8,7 @@ addEventHandler("onClientBrowserCreated", theBrowser,
     function()
         loadBrowserURL(source, url)
         showCursor(true)
+        setCameraMatrix(0, 0, 5, 0, 0, 5)
     end
 )
 

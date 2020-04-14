@@ -17,6 +17,8 @@ local admin_rank = getElementData(source, 'admin_rank')
             local uppercaseRank = string.upper(i)
             outputChatBox(v..'['..uppercaseRank..']#FFFFFF'..getPlayerName(source)..': #FFFFFF'..msg, root, 255, 255, 255, true)
             break
+        else
+            outputChatBox('#FFFFFF'..getPlayerName(source)..': '..msg, root, 255, 255, 255, true)
         end
     end
 end

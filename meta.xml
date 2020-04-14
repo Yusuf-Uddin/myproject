@@ -8,13 +8,13 @@
     <script src="database/userdata_s.lua" type="server"/>
 
     <!-- LOGIN -->
-    <script src="login/login_c.lua" type="client"/>
-    <script src="login/login_s.lua" type="server"/>
-    <script src="login/pedCreation_s.lua" type="server"/>
-    <file src="login/index.html"/>
-    <file src="login/styles.css"/>
-    <file src="login/login.js"/>
-    <file src="login/css/bootstrap.min.css"/>
+    <script src="accounts/login_c.lua" type="client"/>
+    <script src="accounts/login_s.lua" type="server"/>
+    <script src="accounts/pedCreation_s.lua" type="server"/>
+    <file src="accounts/index.html"/>
+    <file src="accounts/styles.css"/>
+    <file src="accounts/login.js"/>
+    <file src="accounts/css/bootstrap.min.css"/>
 
     <!-- CHAT SYSTEM -->
     <script src="chatSys/admin_s.lua" type="server"/>
